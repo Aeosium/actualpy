@@ -501,7 +501,7 @@ class Preferences(BaseModel, table=True):
 
 
 class ReflectBudgets(SQLModel, table=True):
-    __tablename__ = "reflect_budgets"
+    __tablename__ = "_reflect_budgets"
 
     id: Optional[str] = Field(default=None, sa_column=Column("id", Text, primary_key=True))
     month: Optional[int] = Field(default=None, sa_column=Column("month", Integer))
@@ -660,7 +660,7 @@ class ZeroBudgetMonths(SQLModel, table=True):
 
 
 class ZeroBudgets(BaseModel, table=True):
-    __tablename__ = "zero_budgets"
+    __tablename__ = "reflect_budgets"
 
     id: Optional[str] = Field(default=None, sa_column=Column("id", Text, primary_key=True))
     month: Optional[int] = Field(default=None, sa_column=Column("month", Integer))
